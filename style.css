@@ -469,10 +469,11 @@ button {
 
     .banner-form {
         flex-direction: row;
+        margin-bottom: 8px;
     }
 
     .banner-input {
-        width: 360px;
+        flex: 1;
         height: 56px;
         padding: 16px;
         font-size: 18px;
@@ -483,6 +484,7 @@ button {
 
     .banner-button {
         width: 160px;
+        margin: 0;
     }
 
     /* footer */
