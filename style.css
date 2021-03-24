@@ -17,7 +17,16 @@ html, body {
     margin: 0;
 }
 
-h1, h2, h3, h4, h5, h6, p {
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+li {
+    list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul {
     margin-block-start: 0;
     margin-block-end: 0;
 }
@@ -185,6 +194,7 @@ button {
     width: 290px;
     height: 290px;
     padding: 24px;
+    color: var(--black);
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 1e-05) 100%), #FFFFFF;
     background-blend-mode: overlay, normal;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1), 0px 4px 6px rgba(0, 0, 0, 0.05), inset 0px 1px 0px rgba(255, 255, 255, 0.1);
@@ -209,6 +219,7 @@ button {
     font-size: 18px;
     line-height: 1.33;
     text-align: center;
+    color: inherit;
 }
 
 .curriculum-button {
@@ -238,6 +249,105 @@ button {
 }
 
 .curriculum .col-12:last-child .curriculum-item {
+    margin: 0;
+}
+
+/* banner */
+.banner {
+    background-color: #F2F8FA;
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.banner .col-12 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.banner-image {
+    width: 290px;
+    height: 240px;
+    padding: 25px 50px;
+    margin-bottom: 16px;
+}
+
+.banner-image img {
+    width: 100%;
+}
+
+.banner-title {
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: -0.05em;
+    line-height: 1;
+    margin-bottom: 16px;
+}
+
+.banner-desc {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.banner-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.banner-input,
+.banner-button {
+    width: 100%;
+}
+
+.banner-input {
+    height: 48px;
+    padding: 12px 16px;
+    border: none;
+    border-radius: 2px;
+    font-size: 16px;
+    letter-spacing: -0.01em;
+    line-height: 1.5;
+    margin-bottom: 8px;
+}
+
+.banner input::placeholder {
+    color: #7B7B7E;
+}
+
+.banner-button {
+    margin-bottom: 8px;
+}
+
+.banner-misc {
+    font-size: 13px;
+    line-height: 1.53;
+    color: #7B7B7E;
+}
+
+.banner-misc strong {
+    font-weight: normal;
+    text-decoration-line: underline;
+    color: #3040C4;
+}
+
+/* footer */
+.footer {
+    padding: 24px 0;
+}
+
+.footer li {
+    height: 24px;
+    font-size: 14px;
+    letter-spacing: -0.01em;
+    line-height: 1.71;
+    color: #807F81;
+    margin-bottom: 8px;
+}
+
+.footer li:last-child {
     margin: 0;
 }
 
@@ -299,10 +409,17 @@ button {
     .program-card {
         margin-bottom: 0;
         margin-right: 30px;
+        cursor: pointer;
+        transition: background-color 0.5s, color 0.5s;
     }
 
     .program-card:last-child {
         margin: 0;
+    }
+
+    .program-card:hover {
+        background-color: var(--default);
+        color: var(--white);
     }
 
     .curriculum-image {
@@ -311,5 +428,71 @@ button {
 
     .curriculum-item {
         max-width: 450px;
+    }
+
+    /* banner */
+    .banner {
+        padding: 80px;
+    }
+
+    .banner .row {
+        align-items: center;
+    }
+
+    .banner .col-12 {
+        align-items: flex-start;
+    }
+
+    .banner-image {
+        width: 370px;
+        height: 300px;
+        padding: 8px 0;
+        margin-bottom: 16px;
+    }
+    
+    .banner-image img {
+        height: 100%;
+    }
+
+    .banner-title {
+        font-size: 40px;
+    }
+
+    .banner-desc {
+        width: 100%;
+        max-width: 530px;
+        font-size: 22px;
+        letter-spacing: -0.01em;
+        line-height: 1.45;
+        text-align: left;
+    }
+
+    .banner-form {
+        flex-direction: row;
+    }
+
+    .banner-input {
+        width: 360px;
+        height: 56px;
+        padding: 16px;
+        font-size: 18px;
+        line-height: 1.33;
+        margin-bottom: 0;
+        margin-right: 8px;
+    }
+
+    .banner-button {
+        width: 160px;
+    }
+
+    /* footer */
+    .footer {
+        padding: 24px 0;
+    }
+
+    .footer li {
+        display: inline-block;
+        margin-bottom: 0;
+        margin-right: 16px;
     }
 }
